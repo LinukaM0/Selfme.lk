@@ -20,7 +20,7 @@ app.use("/images", express.static(path.join(__dirname, "Item_images")));
 
 mongoose
   .connect(
-    "mongodb+srv://adminSelfme:P40YIFy04Am8rnDe@cluster0.4bp3tta.mongodb.net/inventoryDBs"
+    "mongodb+srv://adminSelfme:P40YIFy04Am8rnDe@cluster0.4bp3tta.mongodb.net/selfmedb"
   )
   .then(() => console.log("Connected to Mongo DB"))
   .then(() => {

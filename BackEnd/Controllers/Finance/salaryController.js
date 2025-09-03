@@ -1,6 +1,4 @@
 const Salary = require('../../Model/Finance/salaryModel');
-const Staff = require('../../Model/Finance/staffModel'); // Assuming staff model exists
-const Job = require('../../Model/Finance/jobModel'); // Assuming job assigning model exists
 
 exports.getAllSalaries = async (req, res) => {
   try {
