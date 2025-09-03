@@ -5,13 +5,18 @@ const itemRoutes = require("./Routes/ItemRoutes");
 const cors = require("cors"); // Add this line
 const path = require("path");
 
+const salaryRoutes = require('./Routes/Finance/SalaryRoutes');
+
 
 //Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use("/items", itemRoutes);
+app.use('/api/salaries', salaryRoutes);
 
 app.use("/images", express.static(path.join(__dirname, "Item_images")));
+
 
 mongoose
   .connect(
